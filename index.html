@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dark"></div>
+    <div class="container">
+      <nav>
+        <div class="nav-one">
+          <div class="menu">
+            <div class="menu-button" onclick="openNav()">
+              <img src="./images/icon-menu.svg" alt="menu img" />
+            </div>
+            <div class="menu-dropdown">
+              <div class="menu-cancel-button" onclick="closeNav()"><img src="./images/icon-close.svg" alt="close svg"></div>
+              <div class="menu-nav">
+                <a href="#">Collections</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+
+          
+          </div>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="image svg" />
+          </div>
+          <div class="topnav">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="nav-two">
+          <div class="cart-box">
+            <div class="cart">
+              <img src="./images/icon-cart.svg" alt="cart svg" />
+            </div>
+            <div class="cart-nums">
+              <div class="cart-num">0</div>
+            </div>
+          </div>
+          <div class="cart-dropdown">
+            <h2>cart</h2>
+            <hr />
+            <p id="cart-items"></p>
+            <ul id="users">
+              <img src="" alt="">
+              <li class="Removal"></li>
+            </ul>
+
+            <!-- <div class="cart-feedback">
+              <div class="feedbacks">
+                <div class="feedback">
+                  <img
+                    src="./images/image-product-1-thumbnail.jpg"
+                    alt="thumbnail-1"
+                  />
+                  <div>
+                    <h4>Four limited Edition Sneaker</h4>
+                    <div class="stress">
+                      <p id="cart-amount"></p>
+                      <p>x</p>
+                      <p id="cart-info">0</p>
+                      <p><b id="cart-total-amount">$</b></p>
+                    </div>
+                  </div>
+                  <div class="delsvg">
+                    <img src="./images/icon-delete.svg" alt="icon-deleteimg" />
+                  </div>
+                </div>
+                <button class="checkout">checkout</button>
+              </div>
+            </div> -->
+          </div>
+          <div class="profile">
+            <img src="./images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="containers">
+      <header>
+        <div class="header-one">
+          <div class="header-one-a">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="product-one"
+              class="image-one"
+            />
+            <img
+              src="./images/pexels-terrance-barksdale-10112911.jpg"
+              alt="product-two"
+              class="image-two"
+              width="100%"
+            />
+            <img
+              src="./images/pexels-melvin-buezo-2529157.jpg"
+              alt="product-three"
+              class="image-three"
+              width="100%"
+            />
+            <img
+              src="./images/pexels-luis-quintero-14212624.jpg"
+              alt="product-four"
+              class="image-four"
+              width="inherit"
+            />
+          </div>
+          <div class="header-one-b">
+            <button class="loops">
+              <a href="javascript:void(0)">
+                <img
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="product one"
+                  id="thumbnail-1"
+                />
+              </a>
+            </button>
+
+            <button class="loops">
+              <a href="javascript:void(0)">
+                <img
+                  src="./images/pexels-terrance-barksdale-10112911.jpg"
+                  alt="product two"
+                  id="thumbnail-2"
+                />
+              </a>
+            </button>
+
+            <button class="loops">
+              <a href="javascript:void(0)">
+                <img
+                  src="./images/pexels-melvin-buezo-2529157.jpg"
+                  alt="product three"
+                  id="thumbnail-3"
+                />
+              </a>
+            </button>
+            <button class="loops">
+              <a href="javascript:void(0)">
+                <img
+                  src="./images/pexels-luis-quintero-14212624.jpg"
+                  alt="product four"
+                  id="thumbnail-4"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="header-two">
+          <h3 id="sneaker-company">Sneaker Company</h3>
+          <h1 id="hero-text">Four Limited Edition of Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="header-two-a">
+            <div class="innerheader">
+              <div class="innerhd">
+                <h2 id="price-stack">$125.00</h2>
+                <span>50%</span>
+              </div>
+              <h4><ins>$250.00</ins></h4>
+            </div>
+            <div class="active-borders">
+              <div class="border">
+                <button class="bts">
+                  <img src="./images/icon-minus.svg" alt="minus" />
+                </button>
+                <!-- <p id="adder">0</p> -->
+                <input type="number" id="input" value="0" />
+                <button class="butn">
+                  <img src="./images/icon-plus.svg" alt="plus svg" />
+                </button>
+              </div>
+              <button class="butts" id="first-button">
+                <img src="./images/icon-carts.svg" alt="image cart" />
+                <h4>Add to cart</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="secondheader">
+    <div class="mobileHeader">
+      <div class="mobile-container">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/image-product-4.jpg" style="width:100%">
+            <div class="text">Sneaker Company</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/pexels-gustavo-gimenez-9853347.jpg" style="width:100%">
+            <div class="text">Jordan Company</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/pexels-mohammad-khan-5470891.jpg" style="width:100%">
+            <div class="text">Nike Company</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/pexels-paul-theodor-oja-2446534.jpg" style="width:100%">
+            <div class="text">Adidas Company</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)"><img src="./images/icon-previous.svg" alt="previous svg"></a>
+          <a class="next" onclick="plusSlides(1)"><img src="./images/icon-next.svg" alt="next svg"></a>
+          
+          </div>
+          <br>
+          
+          <!-- <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+
+          </div> -->
+      </div>
+      <div class="container">
+        <div class="header-two">
+          <h3 id="sneaker-company">Sneaker Company</h3>
+          <h1 id="hero-text">Four Limited Edition of Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="header-two-a">
+            <div class="innerheader">
+              <div class="innerhd">
+                <h2 id="price-stack">$125.00</h2>
+                <span>50%</span>
+              </div>
+              <h4><ins>$250.00</ins></h4>
+            </div>
+            <div class="active-borders">
+              <div class="border">
+                <button class="bts" id="mobile-buttonA">
+                  <img src="./images/icon-minus.svg" alt="minus" />
+                </button>
+                <!-- <p id="adder">0</p> -->
+                <input type="number" id="inputs" value="0" />
+                <button class="butn" id="mobile-buttonB">
+                  <img src="./images/icon-plus.svg" alt="plus svg" />
+                </button>
+              </div>
+              <button class="butts">
+                <img src="./images/icon-carts.svg" alt="image cart" />
+                <h4>Add to cart</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
